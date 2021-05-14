@@ -7,6 +7,11 @@
 	--red: #fc312f;
 }
 
+html {
+	/*For smooth scrolling behavior*/
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: var(--backgroundColor);
 	color: var(--fontColor);
@@ -26,11 +31,11 @@ body {
 	z-index: +5;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link:first-child{
+.navbar-expand-lg .navbar-nav .nav-link:first-child {
 	padding-left: 0 !important;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link{
+.navbar-expand-lg .navbar-nav .nav-link {
 	padding-left: 1rem;
 	padding-right: 1rem;
 }
@@ -69,7 +74,8 @@ body {
 }
 
 .font-300 {
-	font-weight: lighter;
+	font-weight: 300;
+	font-style: var(--bodyFont);
 }
 
 .font-size-md {
@@ -333,13 +339,39 @@ a:hover {
 	color: var(--btnColor);
 }
 
-/* .active a{
-  color: red !important;
-} */
-
-.navbar-nav > .active > a {
-	color: red !important;
+.active {
+	color: #70685b;
+	position: relative;
+	font-weight: 500;
 }
+
+.active::before {
+	content: "";
+	position: absolute;
+	height: 5px;
+	border-bottom: 1px solid var(--fontColor);
+	bottom: 0;
+	width: 74px;
+}
+
+.activee {
+	color: #70685b !important;
+	position: relative;
+	font-weight: 500;
+}
+
+.activee::before {
+	content: "";
+	position: absolute;
+	height: 5px;
+	border-bottom: 1px solid var(--fontColor);
+	bottom: 0;
+	width: 64px;
+}
+
+/* .navbar-nav > .active > a {
+	color: red !important;
+} */
 
 /* a:link {
 	color: var(--fontColor);
@@ -709,7 +741,7 @@ a:focus{
 		left: 0px;
 	}
 
-	.designer{
+	.designer {
 		padding-left: 118px;
 	}
 
@@ -820,6 +852,9 @@ a:focus{
 		width: 55px;
 		height: 55px;
 	}
+	.d-none {
+		display: none;
+	}
 	.box-5 {
 		width: 55px;
 		height: 55px;
@@ -832,6 +867,23 @@ a:focus{
 	}
 	.image-flexx {
 		flex-direction: column;
+	}
+	.featured {
+		text-transform: uppercase;
+		font-family: var(--bodyFont);
+		position: relative;
+		padding-left: 120px;
+	}
+
+	.featured::before {
+		content: "";
+		height: 1px;
+		width: 112px;
+		background: #70685b;
+		display: inline-block;
+		position: absolute;
+		top: 10px;
+		left: 0;
 	}
 	/* .text-center {
 		text-align: left;
@@ -857,5 +909,28 @@ a:focus{
 	}
 	.width-90 {
 		width: 100%;
+	}
+	.navbar-expand-lg .navbar-nav .nav-link {
+		padding-left: 0rem;
+		padding-right: 1rem;
+	}
+	/* .projects .text .title {
+		font-size: 14px;
+	} */
+	.active::before {
+		content: "";
+		position: absolute;
+		height: 5px;
+		border-bottom: 1px solid var(--fontColor);
+		bottom: 0;
+		width: 0px;
+	}
+	.activee::before {
+		content: "";
+		position: absolute;
+		height: 5px;
+		border-bottom: 1px solid var(--fontColor);
+		bottom: 0;
+		width: 0px;
 	}
 }
