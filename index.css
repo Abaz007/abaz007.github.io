@@ -579,8 +579,20 @@ a:focus{
 .taskbox {
 	display: flex;
 	justify-content: space-between;
+	width: 100%;
+	margin: 24px auto 0px;
 }
 
+.taskboxx {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 24px auto 0px;
+}
+
+.text-centerr {
+	text-align: center;
+}
 .task {
 	box-shadow: 0px 0px 15px rgba(112, 104, 91, 0.23);
 	border-radius: 5px;
@@ -589,6 +601,8 @@ a:focus{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 42%;
+	text-align: center;
 }
 
 .text-center {
@@ -685,6 +699,10 @@ a:focus{
 	width: 243px;
 	height: 220px;
 	background-color: #031a6e;
+}
+
+.mleft {
+	margin-left: -12px;
 }
 
 .box-6 {
@@ -836,14 +854,20 @@ a:focus{
 	.process-image {
 		width: 100%;
 	}
+
 	.taskbox {
 		flex-direction: column;
+		margin: 10px auto 0px;
 	}
 	.task {
 		flex-direction: column;
 		margin-bottom: 28px;
-		width: 100%;
+		width: 90%;
 	}
+	.taskboxx {
+		margin: 0px auto 0px;
+	}
+
 	.tsk {
 		width: 90%;
 	}
